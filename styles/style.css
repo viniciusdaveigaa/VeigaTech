@@ -1,0 +1,272 @@
+/* Estilos Gerais */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Cabeçalho e Navegação */
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 5px 0;
+    transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #f39c12;
+    border-bottom: 2px solid #f39c12;
+}
+
+/* Ícone do menu para dispositivos móveis */
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Seções principais */
+main {
+    padding: 60px 20px;
+    background-color: #fff;
+}
+
+main section {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+main section h1,
+main section h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 700;
+}
+
+main section p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+main section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Serviços */
+#servicos ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#servicos ul li {
+    background-color: #f39c12;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    flex: 1;
+    min-width: 250px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-align: center;
+}
+
+#servicos ul li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    margin-top: 50px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        display: none; /* Esconde o menu por padrão */
+        width: 100%;
+        background-color: #333;
+        padding: 0;
+    }
+
+    nav ul.show {
+        display: flex; /* Mostra o menu quando o ícone for clicado */
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block; /* Mostra o ícone do menu em telas pequenas */
+    }
+
+    header {
+        justify-content: space-between;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    #servicos ul {
+        flex-direction: column;
+    }
+}
+/* Cabeçalho e Navegação */
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none; /* Remove o sublinhado do link */
+}
+
+header .logo:hover {
+    color: #f39c12; /* Adiciona um efeito hover */
+}
+
+nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+        background-color: #333;
+        padding: 0;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 20px;
+    }
+
+    header {
+        justify-content: flex-start;
+        padding-right: 60px;
+    }
+
+    .logo {
+        margin-left: 20px;
+    }
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border: 2px solid #f39c12;
+    box-shadow: 0 0 5px rgba(243, 156, 18, 0.5);
+}
