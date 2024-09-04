@@ -283,3 +283,8 @@ button:hover {
 html {
     scroll-behavior: smooth;
 }
+
+main section {
+    padding-top: 65px;
+}
+  

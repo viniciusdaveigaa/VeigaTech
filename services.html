@@ -6,6 +6,19 @@
     <title>Serviços - VeigaTech</title>
     <link rel="stylesheet" href="styles/style.css">
 </head>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      if (window.location.hash) {
+        const target = document.querySelector(window.location.hash);
+        
+        if (target) {
+          window.scrollTo({
+            top: target.offsetTop - 1, behavior: 'smooth'
+          });
+        }
+      }
+    });
+  </script>
 <body>
     <header>
         <a href="index.html" class="logo">VeigaTech</a>
@@ -45,3 +58,5 @@
     <script src="scripts/main.js"></script>
 </body>
 </html>
+
+  
