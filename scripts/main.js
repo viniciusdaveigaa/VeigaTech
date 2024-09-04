@@ -5,22 +5,21 @@ document.addEventListener('DOMContentLoaded', function () {
     const nav = document.querySelector('nav ul');
 
     menuToggle.addEventListener('click', function () {
-        nav.classList.toggle('show'); // Adiciona ou remove a classe 'show'
+        nav.classList.toggle('show'); 
+        menuToggle.classList.toggle('active');
     });
 
-    // Fechar o menu quando um link for clicado (em dispositivos móveis)
     nav.addEventListener('click', function (e) {
         if (e.target.tagName === 'A') {
             nav.classList.remove('show');
+            menuToggle.classList.remove('active');
         }
     });
 
-    // Gerenciar o resize para manter a navegação visível se voltar ao modo desktop
     window.addEventListener('resize', function () {
         if (window.innerWidth > 768) {
             nav.classList.remove('show');
+            menuToggle.classList.remove('active');
         }
     });
 });
-
-
